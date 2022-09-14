@@ -1,5 +1,6 @@
 package com.ray.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -27,6 +28,11 @@ class MainActivity : AppCompatActivity() {
             val valor1 = num1?.text.toString().toInt()
             val valor2 = num2?.text.toString().toInt()
             result.text = "Resultado: ${valor1 + valor2}"
+        }
+
+        findViewById<Button>(R.id.btnTela2).setOnClickListener {
+            val intent = Intent(MainActivity@this, Tela2Activity::class.java)
+            startActivity(intent)
         }
     }
 
